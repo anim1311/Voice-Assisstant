@@ -25,5 +25,7 @@ if __name__ == "__main__":
 
     os.system("title.bat")
     query= voice.getSpeech()
-    print(query)
-    calls.callApp(query)
+    print("User> "+ query)
+    ans = calls.callApp(query)
+    print("Voice Assisstant> "+ ans)
+    voice.SpeakText(ans)    

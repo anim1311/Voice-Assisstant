@@ -1,10 +1,11 @@
 
 
 import warnings
+import os
 warnings.simplefilter("ignore")
 from distutils.log import error
 from .. import webbrowser
-from pywinauto.application import Application 
+
 
 
 def openCall(query):
@@ -22,8 +23,8 @@ Written by Anirudh Madhusudhan
         
         elif "spotify" in query:
             try:
-                app = Application().start('Spotify.exe')
-            except Application.AppStartError :
+                os.system("Spotify.exe")
+            except os.error:
                 webbrowser.open("https://open.spotify.com/")
             except:
                 return "Spotify could not opened"

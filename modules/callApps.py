@@ -24,7 +24,7 @@ written by Anirudh Madhusudhan
 
         # play commands 
         elif "play" in query:
-            playCall(query)
+            return playCall(query)
 
 
         # help command
